@@ -21,6 +21,7 @@
     align-items: center;
     background-color: #2A2A2A;
     height: 772px;
+    margin-bottom: 40px;
 
     &__name {
         color: white;
