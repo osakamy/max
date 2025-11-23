@@ -28,6 +28,7 @@
 .header {
     background-color: #ffffff;
     width: 100%;
+    margin-bottom: 24px;
 }
 
 .hero {
