@@ -40,6 +40,7 @@
         background: white;
         padding: 18px 42px;
         font-size: 14px;
+        cursor: pointer;
     }
 
     &__line {

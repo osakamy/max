@@ -1,24 +1,20 @@
 <script setup>
 import { ref } from 'vue'
-import { onMounted } from 'vue'
-
 import image1 from '../assets/image/swiper.jpg'
 import image2 from '../assets/image/swiper2.jpg'
 import image3 from '../assets/image/swiper3.jpg'
 
-import { Pagination, Autoplay} from 'swiper/modules';
-
+import { Pagination, Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/vue';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
 import 'swiper/css/autoplay';
 
 const slides = ref([
-  { image: image1, alt: 'Slide 1' },
-  { image: image2, alt: 'Slide 2' },
-  { image: image3, alt: 'Slide 3' },
+  { id: 1, image: image1, alt: 'Slide 1' },
+  { id: 2, image: image2, alt: 'Slide 2' },
+  { id: 3, image: image3, alt: 'Slide 3' },
 ])
 
 const modules = [Pagination, Autoplay];
@@ -33,19 +29,16 @@ const onSlideChange = () => {
 </script>
 
 <template>
-    <div class="title">
-        <div class="title__line"></div>
-        <h3 class="title__name">Наиболее популярные</h3>
-    </div>
-    
-
+  <div class="title">
+    <div class="title__line"></div>
+    <h3 class="title__name">Наиболее популярные</h3>
+  </div>
+  
   <swiper
     :modules="modules"
     :slides-per-view="2"
     :space-between="0"
-    navigation
     :pagination="{ clickable: true }"
-    :scrollbar="{ draggable: true }"
     :autoplay="{
       delay: 3000,
       disableOnInteraction: false,
@@ -53,12 +46,13 @@ const onSlideChange = () => {
     @swiper="onSwiper"
     @slideChange="onSlideChange"
   >
-    <swiper-slide class="swiper__slide"
-            v-for="slide in slides" :key="id"
-            >
-             <img class="swiper__slide--img" :src="slide.image" :alt="slide.alt">
-            </swiper-slide>
-    ...
+    <swiper-slide 
+      class="swiper__slide"
+      v-for="slide in slides" 
+      :key="slide.id"
+    >
+      <img class="swiper__slide--img" :src="slide.image" :alt="slide.alt">
+    </swiper-slide>
   </swiper>
 </template>
 
