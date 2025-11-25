@@ -1,22 +1,29 @@
 <script setup>
 import { ref, nextTick } from 'vue'
 
-const opened = ref(null) // id открытого блока
+const opened = ref(null)
 
 const toggle = async (id) => {
+  const previous = opened.value
   opened.value = opened.value === id ? null : id
+  
   await nextTick()
-  animateHeight(id)
+
+  if (previous !== null && previous !== id) {
+    animateHeight(previous, false)
+  }
+
+  animateHeight(id, opened.value === id)
 }
 
-const animateHeight = (id) => {
+const animateHeight = (id, isOpen) => {
   const el = document.getElementById(`faq-content-${id}`)
   if (!el) return
 
   const inner = el.querySelector('.faq__inner')
   const fullHeight = inner.scrollHeight
 
-  if (opened.value === id) {
+  if (isOpen) {
     el.style.maxHeight = fullHeight + 'px'
     el.style.opacity = '1'
   } else {
@@ -127,7 +134,6 @@ const animateHeight = (id) => {
     font-weight: bold;
   }
 
-  /* Контейнер, который анимируем */
   &__content {
     max-height: 0;
     opacity: 0;
@@ -135,7 +141,6 @@ const animateHeight = (id) => {
     transition: max-height 0.4s ease, opacity 0.3s ease;
   }
 
-  /* Внутренний блок для auto-height */
   &__inner {
     padding: 0 20px 15px;
   }
