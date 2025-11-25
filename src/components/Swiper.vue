@@ -41,8 +41,8 @@ const onSlideChange = () => {
 
   <swiper
     :modules="modules"
-    :slides-per-view="1"
-    :space-between="50"
+    :slides-per-view="2"
+    :space-between="0"
     navigation
     :pagination="{ clickable: true }"
     :scrollbar="{ draggable: true }"
@@ -56,7 +56,7 @@ const onSlideChange = () => {
     <swiper-slide class="swiper__slide"
             v-for="slide in slides" :key="id"
             >
-             <img :src="slide.image" :alt="slide.alt">
+             <img class="swiper__slide--img" :src="slide.image" :alt="slide.alt">
             </swiper-slide>
     ...
   </swiper>
@@ -65,8 +65,22 @@ const onSlideChange = () => {
 <style scoped lang="scss">
 .swiper {
   position: relative;
-  width: 100%;
-  height: 100vh;
+  width: 60%;
+  height: 50vh;
+  background: black;
+
+  &__wrapper {
+    background: black;
+  }
+
+  &__slide {
+
+    &--img {
+        width: 100%;
+        height: 100%;
+        // object-fit: cover;
+    }
+  }
 }
 
 .swiper-pagination {

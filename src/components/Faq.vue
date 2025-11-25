@@ -1,20 +1,21 @@
 <script setup>
 const toggleIcon = (event) => {
-  const details = event.currentTarget
-  const icon = details.querySelector('.faq__icon')
+  const details = event.currentTarget;
+  const icon = details.querySelector('.faq__icon');
   
-  // Закрываем все другие открытые details
-  if (details.open) {
-    const allDetails = document.querySelectorAll('.faq__details')
-    allDetails.forEach(otherDetails => {
-      if (otherDetails !== details && otherDetails.open) {
-        otherDetails.open = false
-        const otherIcon = otherDetails.querySelector('.faq__icon')
-        otherIcon.textContent = '+'
-      }
-    })
-  }
-  icon.textContent = details.open ? '−' : '+'
+  setTimeout(() => {
+    if (details.open) {
+      const allDetails = document.querySelectorAll('.faq__details');
+      allDetails.forEach(otherDetails => {
+        if (otherDetails !== details && otherDetails.open) {
+          otherDetails.open = false;
+          const otherIcon = otherDetails.querySelector('.faq__icon');
+          otherIcon.textContent = '+';
+        }
+      });
+    }
+    icon.textContent = details.open ? '−' : '+';
+  }, 50);
 }
 </script>
 
@@ -57,12 +58,16 @@ const toggleIcon = (event) => {
         flex-direction: column;
         align-items: center;
         background: #e8e8e8;
+        padding: 20px;
     }
 
     &__details {
         max-width: 832px;
         width: 100%;
         margin-bottom: 10px;
+        background: white;
+        border-radius: 8px;
+        overflow: hidden;
     }
 
     &__title {
@@ -71,6 +76,8 @@ const toggleIcon = (event) => {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding: 15px 20px;
+        margin: 0;
         
         &::-webkit-details-marker {
             display: none;
@@ -82,9 +89,28 @@ const toggleIcon = (event) => {
     }
 
     &__icon {
+        padding: 0.6px 10px;
+        color: white;
+        border-radius: 50%;
+        background: black;
         font-size: 18px;
         font-weight: bold;
         margin-left: 10px;
+    }
+
+    &__paragraph {
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: all 0.4s ease-in-out;
+        margin: 0;
+        padding: 0 20px;
+    }
+
+    &__details[open] &__paragraph {
+        max-height: 100px;
+        opacity: 1;
+        padding: 0 20px 15px 20px;
     }
 }
 
