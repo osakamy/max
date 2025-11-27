@@ -13,9 +13,9 @@
                 <div class="footer__about--shop">
                     <h4>Магазин</h4>
                     <div class="footer__about--shop-items">
-                        <p>Худи</p>
-                        <p>Зип-худи</p>
-                        <p>Предзаказ</p>
+                        <RouterLink to="/cataloghydi" class="shop__item">Худи</RouterLink>
+                        <RouterLink to="/cataloghydi" class="shop__item">Зип-худи</RouterLink>
+                        <RouterLink to="/cataloghydi" class="shop__item">Предзаказ</RouterLink>
                     </div>
                 </div>
                 <div class="footer__about--info">
@@ -97,5 +97,10 @@ p {
 .footer__logo {
     border-left: black 1px solid;
     padding-left: 12px;
+}
+
+.shop__item {
+    color: black;
+    text-decoration: none
 }
 </style>

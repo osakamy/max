@@ -17,9 +17,9 @@ const toggleSearch = async () => {
   <section class="header">
     <div class="header__cantainer">
       <div class="hero">
-        <p class="logo">Urban Wealth</p>
+        <p class="hero__logo">Urban Wealth</p>
         <div class="navigation">
-          <p class="navigation__main">ГЛАВНАЯ</p>
+          <RouterLink to="/" class="navigation__main">ГЛАВНАЯ</RouterLink>
         </div>
         <div class="nav__icons">
           <div class="search-wrap" :class="{ open: isSearchOpen }">
@@ -27,7 +27,7 @@ const toggleSearch = async () => {
             />
           </div>
           <img src="../assets/image/search.svg" alt="search" class="search-icon" @click="toggleSearch"/>
-          <img src="../assets/image/favorites.svg" alt="">
+          <RouterLink to="/favorites"><img class="favorites__icon" src="../assets/image/favorites.svg" alt=""></RouterLink>
           <img src="../assets/image/account.svg" alt="">
           <img src="../assets/image/cart.svg" alt="">
         </div>
@@ -52,7 +52,7 @@ const toggleSearch = async () => {
   margin-top: 24px;
 }
 
-.logo {
+.hero__logo {
   font-weight: 500;
   border-left: black 1px solid;
   padding-left: 12px;
@@ -66,6 +66,8 @@ const toggleSearch = async () => {
   &__main {
     font-weight: 500;
     cursor: pointer;
+    color: black;
+    text-decoration: none;
   }
 }
 
@@ -114,5 +116,9 @@ const toggleSearch = async () => {
   background: white;
   font-size: 14px;
   outline: none;
+}
+
+.favorites__icon {
+  padding-top: 5px;
 }
 </style>

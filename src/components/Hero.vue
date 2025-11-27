@@ -1,4 +1,6 @@
 <script setup>
+import { RouterLink } from 'vue-router';
+
 
 </script>
 
@@ -8,7 +10,7 @@
             <div class="main__line"></div>
             <h3 class="main__name">Urban Wealth</h3>
             <p class="main__idea">Отражая индивидуальность и стиль</p>
-            <button class="main__btn">СМОТРЕТЬ КОЛЛЕКЦИЮ</button>
+            <RouterLink to="/category" class="main__btn">СМОТРЕТЬ КОЛЛЕКЦИЮ</RouterLink>
         </div>
     </section>
 </template>
@@ -41,6 +43,8 @@
         padding: 18px 42px;
         font-size: 14px;
         cursor: pointer;
+        text-decoration: none;
+        border-color: transparent;
     }
 
     &__line {
