@@ -2,6 +2,7 @@
 import Faq from '@/components/Faq.vue';
 import Hero from '@/components/Hero.vue';
 import Swiper from '@/components/Swiper.vue';
+import ModelViewer from "@/components/ModelViewer.vue";
 
 </script>
 
@@ -9,4 +10,5 @@ import Swiper from '@/components/Swiper.vue';
     <Hero/>
     <Swiper/>
     <Faq/>
+    <ModelViewer/>
 </template>

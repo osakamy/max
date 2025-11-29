@@ -21,7 +21,7 @@ function closeModal() {
 
 <template>
     <section>
-        <div class="cards-container">
+        <div class="cards__container">
             <CatalogHydizipCard v-for="card in cards2" :key="card.id" :card="card" @ClickCard="showModal"/>
         </div>
         <div class="modal" :style="{display: `${visible}`}">
@@ -39,7 +39,7 @@ function closeModal() {
 </template>
 
 <style scoped lang="scss">
-.cards-container {
+.cards__container {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -56,5 +56,7 @@ function closeModal() {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    // &__
 }
 </style>

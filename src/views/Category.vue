@@ -30,8 +30,6 @@
 
         &__cards {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
             gap: 40px;
         }
 
@@ -39,10 +37,19 @@
             max-width: 500px;
             max-height: 500px;
             text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+
+            &:hover {
+                transform: translateY(-8px);
+                border-color: #999896;
+            }
 
             &--img {
-                max-width: 500px;
-                max-height: 500px;
+                max-width: 498px;
+                max-height: 498px;
             }
 
             &--paragraph {
@@ -54,5 +61,10 @@
         &__title {
             text-align: center;
         }
+    }
+
+    h2 {
+        margin-bottom: 24px;
+        font-weight: 500;
     }
 </style>

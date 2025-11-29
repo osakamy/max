@@ -98,6 +98,7 @@ export const cards3 = [
         paragraph: 'text',
         price: '100$',
         id: 1,
+        has3dModel: true
     },
     {
         image: Card3,
@@ -105,6 +106,7 @@ export const cards3 = [
         paragraph: 'text',
         price: '200$',
         id: 2,
+        has3dModel: true
     },
     {
         image: Card3,
@@ -112,23 +114,27 @@ export const cards3 = [
         paragraph: 'text',
         price: '300$',
         id: 3,
+        has3dModel: true
     },{
         image: Card3,
         title: 'Urban Wealth',
         paragraph: 'text',
-        price: '300$',
+        price: '400$',
         id: 4,
+        has3dModel: true
     },{
         image: Card3,
         title: 'Urban Wealth',
         paragraph: 'text',
-        price: '300$',
+        price: '500$',
         id: 5,
+        has3dModel: true
     },{
         image: Card3,
         title: 'Urban Wealth',
         paragraph: 'text',
-        price: '300$',
+        price: '600$',
         id: 6,
+        has3dModel: true
     },
 ]

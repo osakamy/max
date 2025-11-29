@@ -45,10 +45,60 @@
 </template>
 
 <style scoped lang="scss">
-.footer__about {
-    display: flex;
-    margin-top: 64px;
-    justify-content: space-between;
+.footer {
+
+
+    &__about {
+        display: flex;
+        margin-top: 64px;
+        justify-content: space-between;
+
+        &--brand {
+            max-width: 225px;
+            gap: 12px;
+        }
+
+        &--icons {
+            display: flex;
+            gap: 16px;
+            margin-top: 24px;
+        }
+
+        &--shop-items {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        &--info-items {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        &--contacts-items {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+    }
+
+    &__property-rights {
+        text-align: center;
+        margin-top: 97px;
+        margin-bottom: 64px;
+        color: gray;
+    }
+
+    &__logo {
+        border-left: black 1px solid;
+        padding-left: 12px;
+    }
+}
+
+.shop__item {
+    color: black;
+    text-decoration: none
 }
 
 h4 {
@@ -57,50 +107,5 @@ h4 {
 }
 p {
     color: gray;
-}
-
-.footer__about--brand {
-    max-width: 225px;
-    gap: 12px;
-}
-
-.footer__property-rights {
-    text-align: center;
-    margin-top: 97px;
-    margin-bottom: 64px;
-    color: gray;
-}
-
-.footer__about--shop-items {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.footer__about--info-items {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.footer__about--contacts-items {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.footer__about--icons {
-    display: flex;
-    gap: 16px;
-    margin-top: 24px;
-}
-.footer__logo {
-    border-left: black 1px solid;
-    padding-left: 12px;
-}
-
-.shop__item {
-    color: black;
-    text-decoration: none
 }
 </style>

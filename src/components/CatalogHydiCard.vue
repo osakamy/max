@@ -15,7 +15,7 @@ const props = defineProps({
         <div class="card-content">
             <h3>{{ card.title }}</h3>
             <p v-if="card.paragraph">{{ card.paragraph }}</p>
-            <p class="price">{{ card.price }}</p>
+            <p class="card__price">{{ card.price }}</p>
         </div>
     </div>
 </template>
@@ -30,6 +30,16 @@ const props = defineProps({
   max-width: 322px;
   cursor: pointer;
   transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-8px);
+    border-color: #999896;
+  }
+
+  &__price{
+    font-weight: bold;
+    color: black;
+  }
   
 
   &__img {
@@ -38,10 +48,5 @@ const props = defineProps({
     width: 100%;
     height: auto;
   }
-}
-
-.price {
-  font-weight: bold;
-  color: black;
 }
 </style>
