@@ -97,9 +97,7 @@ async function init3DModel() {
     
     console.log('📦 Начинаем загрузку модели...')
     
-    loader.load(
-        "/3dModel/scene.gltf",
-        (gltf) => {
+    loader.load("/3dModel/3dModelTshirt/scene.gltf", (gltf) => {
             console.log('✅ Модель успешно загружена:', gltf)
             
             // Удаляем тестовый куб

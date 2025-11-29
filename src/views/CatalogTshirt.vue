@@ -1,7 +1,7 @@
 <script setup>
 import { cards3 } from '../data/cardsData.js'
 import TshirtCard from '../components/CatalogTshirtCard.vue'
-import Modal from '../components/Modal.vue'
+import Modal from '../components/ModalTshirt.vue'
 import { ref } from 'vue'
 
 const isModalVisible = ref(false)

@@ -1,7 +1,7 @@
 <script setup>
 import { cards2 } from '../data/cardsData.js'
 import CatalogHydizipCard from '../components/CatalogHydizipCard.vue'
-import Modal from '../components/Modal.vue'
+import Modal from '../components/ModalHydizip.vue'
 import { ref } from 'vue'
 
 

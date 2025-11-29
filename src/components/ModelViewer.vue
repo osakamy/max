@@ -22,9 +22,7 @@ onMounted(() => {
 
   const loader = new GLTFLoader();
 
-  loader.load(
-    "/3dModel/scene.gltf",
-    (gltf) => {
+  loader.load("/3dModel/3dModelTshirt/scene.gltf", (gltf) => {
       gltf.scene.scale.set(2, 2, 2);
       scene.add(gltf.scene);
 
