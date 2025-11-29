@@ -1,4 +1,6 @@
 <script setup>
+const emit = defineEmits(['ClickCard'])
+
 const props = defineProps({
   card: {
     type: Object,
@@ -8,7 +10,7 @@ const props = defineProps({
 </script>
 
 <template>
-    <div class="card">
+    <div class="card" @click="emit('ClickCard', card.id)">
         <img class="card__img" :src="card.image" :alt="card.title">
         <div class="card-content">
             <h3>{{ card.title }}</h3>

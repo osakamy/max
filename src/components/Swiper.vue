@@ -1,8 +1,8 @@
 <script setup>
 import { ref } from 'vue'
-import image1 from '../assets/image/swiper.jpg'
-import image2 from '../assets/image/swiper2.jpg'
-import image3 from '../assets/image/swiper3.jpg'
+import image1 from '../assets/image/hydi.png'
+import image2 from '../assets/image/hydizip.png'
+import image3 from '../assets/image/t-shirt.png'
 
 import { Pagination, Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/vue';
@@ -62,10 +62,10 @@ const onSlideChange = () => {
   position: relative;
   width: 60%;
   height: 50vh;
-  background: black;
+  background: white;
 
   &__wrapper {
-    background: black;
+    background: white;
   }
 
   &__slide {
@@ -101,7 +101,7 @@ const onSlideChange = () => {
 }
 
 :deep(.swiper-pagination-bullet-active) {
-    background: white !important;
+    background: black !important;
     transform: scale(1.2) !important;
 }
 
