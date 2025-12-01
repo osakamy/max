@@ -8,20 +8,20 @@
             <div class="footer__about">
                 <div class="footer__about--brand">
                     <h4 class="footer__logo">Urban Wealth</h4>
-                    <p>Отражая индивидуальность и стиль в каждом худи</p>
+                    <p class="footer__slogan">Отражая индивидуальность и стиль в каждом худи</p>
                 </div>
                 <div class="footer__about--shop">
-                    <h4>Магазин</h4>
+                    <RouterLink to="/category" class="shop">Магазин</RouterLink>
                     <div class="footer__about--shop-items">
-                        <RouterLink to="/cataloghydi" class="shop__item">Худи</RouterLink>
-                        <RouterLink to="/cataloghydi" class="shop__item">Зип-худи</RouterLink>
-                        <RouterLink to="/cataloghydi" class="shop__item">Предзаказ</RouterLink>
+                        <RouterLink to="/cataloghydi" class="shop__item shop__item--hydi">Худи</RouterLink>
+                        <RouterLink to="/cataloghydizip" class="shop__item">Зип-худи</RouterLink>
+                        <RouterLink to="/catalogtshirt" class="shop__item">Футболки</RouterLink>
                     </div>
                 </div>
                 <div class="footer__about--info">
                     <h4>Информация</h4>
                     <div class="footer__about--info-items">
-                        <p>О бренде</p>
+                        <p class="item__about">О бренде</p>
                         <p>Доставка</p>
                         <p>Возврат</p>
                     </div>
@@ -29,7 +29,7 @@
                 <div class="footer__about--contacts">
                     <h4>Контакты</h4>
                     <div class="footer__about--contacts-items">
-                        <p>info@urbanwealth.ru</p>
+                        <p class="item__mail">info@urbanwealth.ru</p>
                         <p>+7 (495) 123-45-67</p>
                     </div>
                     <div class="footer__about--icons">
@@ -93,19 +93,39 @@
     &__logo {
         border-left: black 1px solid;
         padding-left: 12px;
+        margin-bottom: 15px;
     }
 }
 
 .shop__item {
     color: black;
-    text-decoration: none
+    text-decoration: none;
+    color: gray;
+
+    &--hydi {
+        margin-top: 15px;
+    }
 }
 
-h4 {
+.item__about {
+    margin-top: 15px;
+}
+
+.item__mail {
+    margin-top: 15px;
+}
+
+.shop {
     font-weight: 500;
-    margin-bottom: 24px;
+    text-decoration: none;
+    color: black;
 }
 p {
     color: gray;
+}
+
+h4 {
+    color: black;
+    font-weight: 500;
 }
 </style>

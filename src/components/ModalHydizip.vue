@@ -1,5 +1,5 @@
 <script setup>
-import { ref, watch, nextTick, onUnmounted, onMounted } from 'vue'
+import { ref, watch, nextTick, onUnmounted } from 'vue'
 import * as THREE from "three"
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
 
@@ -97,7 +97,7 @@ async function init3DModel() {
     
     console.log('📦 Начинаем загрузку модели...')
     
-    loader.load("/3dModel/нужный путь", (gltf) => {
+    loader.load("/3dModel/3dModelTshirt/scene.gltf", (gltf) => {
             console.log('✅ Модель успешно загружена:', gltf)
             
             // Удаляем тестовый куб
@@ -360,7 +360,7 @@ onUnmounted(() => {
 .view-3d-btn,
 .view-2d-btn {
     padding: 12px 24px;
-    background: #007bff;
+    background: black;
     color: white;
     border-radius: 6px;
     border: none;
@@ -369,7 +369,7 @@ onUnmounted(() => {
     transition: background 0.3s ease;
 
     &:hover {
-        background: #0056b3;
+        background: rgb(48, 47, 47);
     }
 }
 
@@ -385,8 +385,8 @@ onUnmounted(() => {
     position: absolute;
     top: 15px;
     right: 15px;
-    background: #ff4444;
-    color: white;
+    // background: #ff4444;
+    color: black;
     border: none;
     border-radius: 50%;
     width: 30px;
@@ -398,7 +398,7 @@ onUnmounted(() => {
     justify-content: center;
 
     &:hover {
-        background: #cc0000;
+        background: white;
     }
 }
 </style>
