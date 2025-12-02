@@ -23,6 +23,5 @@ import CatalogHydiCard from '../components/CatalogHydiCard.vue'
     flex-wrap: wrap;
     gap: 20px;
     padding: 20px;
-    justify-content: center;
 }
 </style>

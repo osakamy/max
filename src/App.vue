@@ -24,12 +24,17 @@ const modalStore = useModalStore()
       :price="modalStore.selectedProduct.price"
       :paragraph="modalStore.selectedProduct.paragraph"
       :show3dModel="modalStore.show3dModel"
+      :size="modalStore.selectedProduct.size"
+      :size2="modalStore.selectedProduct.size2"
+      :size3="modalStore.selectedProduct.size3"
+      :size4="modalStore.selectedProduct.size4"
+      :size5="modalStore.selectedProduct.size5"
       @closeModal="modalStore.closeModal"
       @switchTo3D="modalStore.switchTo3D"
       @switchTo2D="modalStore.switchTo2D"
     />
     
-    <!-- Модальное окно для гидрокостюма -->
+     <!-- Модальное окно для худизип] -->
     <ModalHydizip
       v-if="modalStore.isModalOpen && modalStore.modalType === 'hydizip' && modalStore.selectedProduct"
       :image="modalStore.selectedProduct.image"
@@ -37,6 +42,11 @@ const modalStore = useModalStore()
       :price="modalStore.selectedProduct.price"
       :paragraph="modalStore.selectedProduct.paragraph"
       :show3dModel="modalStore.show3dModel"
+      :size="modalStore.selectedProduct.size"
+      :size2="modalStore.selectedProduct.size2"
+      :size3="modalStore.selectedProduct.size3"
+      :size4="modalStore.selectedProduct.size4"
+      :size5="modalStore.selectedProduct.size5"
       @closeModal="modalStore.closeModal"
       @switchTo3D="modalStore.switchTo3D"
       @switchTo2D="modalStore.switchTo2D"
@@ -50,6 +60,11 @@ const modalStore = useModalStore()
       :price="modalStore.selectedProduct.price"
       :paragraph="modalStore.selectedProduct.paragraph"
       :show3dModel="modalStore.show3dModel"
+      :size="modalStore.selectedProduct.size"
+      :size2="modalStore.selectedProduct.size2"
+      :size3="modalStore.selectedProduct.size3"
+      :size4="modalStore.selectedProduct.size4"
+      :size5="modalStore.selectedProduct.size5"
       @closeModal="modalStore.closeModal"
       @switchTo3D="modalStore.switchTo3D"
       @switchTo2D="modalStore.switchTo2D"

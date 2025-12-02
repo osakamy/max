@@ -47,12 +47,6 @@ const removeFromFavorites = (item) => {
   }
   favoritesStore.removeFromFavorites(productToRemove)
 }
-
-// Функция для открытия модалки с товаром
-const openProductModal = (item) => {
-  const productData = getCardData(item)
-  modalStore.openModal(productData)
-}
 </script>
 
 <template>

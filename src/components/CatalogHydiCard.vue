@@ -114,8 +114,8 @@ const handleCardClick = () => {
   &__img {
     max-width: 400px;
     max-height: 400px;
-    width: 100%;
-    height: auto;
+    width: 288px;
+    height: 384px;
     border-radius: 4px;
   }
 }

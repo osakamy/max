@@ -45,6 +45,7 @@ import { RouterLink } from 'vue-router';
         cursor: pointer;
         text-decoration: none;
         border-color: transparent;
+        border-radius: 5px;
     }
 
     &__line {

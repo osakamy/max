@@ -8,7 +8,12 @@ const props = defineProps({
     title: String,
     price: String,
     paragraph: String,
-    show3dModel: Boolean
+    show3dModel: Boolean,
+    size: String,
+    size2: String,
+    size3: String,
+    size4: String,
+    size5: String
 })
 
 const emit = defineEmits(['closeModal', 'switchTo3D', 'switchTo2D'])
@@ -222,12 +227,7 @@ onUnmounted(() => {
         <div class="modal-window">
             
             <!-- 2D изображение -->
-            <img 
-                v-if="!show3dModel" 
-                class="modal-img" 
-                :src="image"
-                alt=""
-            >
+            <img v-if="!show3dModel" class="modal-img" :src="image" alt="">
 
             <!-- 3D модель -->
             <div 
@@ -243,6 +243,14 @@ onUnmounted(() => {
                 <h3 class="modal-title">{{ title }}</h3>
                 <p class="modal-description">{{ paragraph }}</p>
                 <p class="modal-price">{{ price }}</p>
+                <div class="modal__size">
+                    <p>Размер: </p>
+                    <button class="size__btn modal__size--l">{{ size }}</button>
+                    <button class="size__btn modal__size--m">{{ size2 }}</button>
+                    <button class="size__btn modal__size--s">{{ size3 }}</button>
+                    <button class="size__btn modal__size--xl">{{ size4 }}</button>
+                    <button class="size__btn modal__size--xxl">{{ size5 }}</button>
+                </div>
 
                 <button 
                     v-if="!show3dModel" 
@@ -401,4 +409,28 @@ onUnmounted(() => {
         background: white;
     }
 }
+
+.modal__size {
+    display: flex;
+    color: black;
+    gap: 20px;
+
+    button {
+        border: 1px solid black;
+        padding: 0px 10px;
+        cursor: pointer;
+        
+        &:hover {
+            background: black;
+            color: white;
+        }
+        
+        &.active {
+            background: black !important;
+            color: white !important;
+            border: 2px solid #ff0000;
+        }
+    }
+}
+
 </style>
