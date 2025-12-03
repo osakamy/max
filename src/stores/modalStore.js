@@ -1,4 +1,3 @@
-// stores/modalStore.js
 import { defineStore } from 'pinia'
 import { ref, computed } from 'vue'
 import { cards, cards2, cards3 } from '../data/cardsData.js'

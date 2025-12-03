@@ -1,4 +1,3 @@
-<!-- components/CatalogHydiCard.vue -->
 <script setup>
 import { ref, computed } from 'vue'
 import { useFavoritesStore } from '../stores/favoritesStore'

@@ -1,4 +1,3 @@
-<!-- App.vue -->
 <script setup>
 import { RouterView } from 'vue-router'
 import AppLayout from './Layout/AppLayout.vue'
