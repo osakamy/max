@@ -48,13 +48,13 @@ const animateHeight = (id, isOpen) => {
         @click="toggle(1)"
       >
         <div class="faq__title">
-          <span class="faq__text">Говно</span>
+          <span class="faq__text">Вопрос</span>
           <span class="faq__icon">{{ opened === 1 ? '−' : '+' }}</span>
         </div>
 
         <div class="faq__content" id="faq-content-1">
           <div class="faq__inner">
-            <p class="faq__paragraph">Залупа</p>
+            <p class="faq__paragraph">Ответ</p>
           </div>
         </div>
       </div>
@@ -65,13 +65,13 @@ const animateHeight = (id, isOpen) => {
         @click="toggle(2)"
       >
         <div class="faq__title">
-          <span class="faq__text">Пенис</span>
+          <span class="faq__text">Вопрос</span>
           <span class="faq__icon">{{ opened === 2 ? '−' : '+' }}</span>
         </div>
 
         <div class="faq__content" id="faq-content-2">
           <div class="faq__inner">
-            <p class="faq__paragraph">Хер</p>
+            <p class="faq__paragraph">Ответ</p>
           </div>
         </div>
       </div>
@@ -82,13 +82,13 @@ const animateHeight = (id, isOpen) => {
         @click="toggle(3)"
       >
         <div class="faq__title">
-          <span class="faq__text">Давалка</span>
+          <span class="faq__text">Вопрос</span>
           <span class="faq__icon">{{ opened === 3 ? '−' : '+' }}</span>
         </div>
 
         <div class="faq__content" id="faq-content-3">
           <div class="faq__inner">
-            <p class="faq__paragraph">Хуй</p>
+            <p class="faq__paragraph">Ответ</p>
           </div>
         </div>
       </div>
