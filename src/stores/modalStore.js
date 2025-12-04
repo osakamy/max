@@ -45,6 +45,8 @@ export const useModalStore = defineStore('modal', () => {
     selectedProductType.value = product.type || product.category || 'cards'
     show3dModel.value = false
     isModalOpen.value = true
+
+    disableBodyScroll()
   }
 
   const closeModal = () => {
@@ -52,6 +54,12 @@ export const useModalStore = defineStore('modal', () => {
     selectedProductId.value = null
     selectedProductType.value = ''
     show3dModel.value = false
+
+    enableBodyScroll()
+  }
+
+  const disableBodyScroll = () => {
+    document.body.style.overflow = 'hidden'
   }
 
   const switchTo3D = () => {

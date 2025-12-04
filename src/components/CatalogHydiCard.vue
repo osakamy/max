@@ -45,14 +45,14 @@ const handleCardClick = () => {
             <img class="card__img" :src="card.image" :alt="card.title">
             <!-- Иконка сердечка -->
             <button 
-                class="heart-button"
+                class="heart__button"
                 @click="handleHeartClick"
                 @mouseenter="isHeartHovered = true"
                 @mouseleave="isHeartHovered = false"
                 :aria-label="isCardFavorite ? 'Удалить из избранного' : 'Добавить в избранное'"
             >
                 <svg 
-                    class="heart-icon" 
+                    class="heart__icon" 
                     :class="{ 
                         'heart-icon--active': isCardFavorite,
                         'heart-icon--hovered': isHeartHovered && !isCardFavorite
@@ -119,7 +119,7 @@ const handleCardClick = () => {
   }
 }
 
-.heart-button {
+.heart__button {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -146,7 +146,7 @@ const handleCardClick = () => {
   }
 }
 
-.heart-icon {
+.heart__icon {
   transition: all 0.3s ease;
   
   &--active {
