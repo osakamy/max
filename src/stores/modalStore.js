@@ -62,6 +62,10 @@ export const useModalStore = defineStore('modal', () => {
     document.body.style.overflow = 'hidden'
   }
 
+  const enableBodyScroll = () => {
+    document.body.style.overflow = 'auto'
+  }
+
   const switchTo3D = () => {
     show3dModel.value = true
   }

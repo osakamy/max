@@ -93,16 +93,50 @@ const removeFromFavorites = (item) => {
     max-width: 1200px;
     margin: 0 auto;
     min-height: 70vh;
+
+    @media (max-width: 1024px) {
+        max-width: 900px;
+        padding: 15px;
+    }
+    
+    @media (max-width: 768px) {
+        max-width: 700px;
+        padding: 10px;
+        min-height: 60vh;
+    }
+    
+    @media (max-width: 414px) {
+        padding: 8px;
+        min-height: 50vh;
+    }
     
     &__header {
         margin-bottom: 30px;
         text-align: center;
+
+        @media (max-width: 768px) {
+            margin-bottom: 20px;
+        }
         
         h1 {
             font-size: 2.2rem;
             margin-bottom: 20px;
             color: #333;
             font-weight: 600;
+
+            @media (max-width: 1024px) {
+                font-size: 2rem;
+            }
+            
+            @media (max-width: 768px) {
+                font-size: 1.8rem;
+                margin-bottom: 15px;
+            }
+            
+            @media (max-width: 414px) {
+                font-size: 1.5rem;
+                margin-bottom: 10px;
+            }
         }
         
         .empty-message {
@@ -122,6 +156,16 @@ const removeFromFavorites = (item) => {
             padding: 20px;
             margin: 0 auto;
             max-width: 600px;
+
+            @media (max-width: 768px) {
+                padding: 15px;
+                max-width: 500px;
+            }
+            
+            @media (max-width: 414px) {
+                padding: 10px;
+                max-width: 100%;
+            }
             
             .count-message {
                 font-size: 1.2rem;
@@ -142,6 +186,20 @@ const removeFromFavorites = (item) => {
         gap: 20px;
         justify-content: center;
         margin-top: 20px;
+
+        @media (max-width: 1024px) {
+            gap: 15px;
+        }
+        
+        @media (max-width: 768px) {
+            gap: 12px;
+        }
+        
+        @media (max-width: 414px) {
+            gap: 10px;
+            flex-direction: column;
+            align-items: center;
+        }
     }
 }
 
@@ -156,6 +214,14 @@ const removeFromFavorites = (item) => {
     background: #f9f9f9;
     border-radius: 12px;
     margin-top: 30px;
+
+    @media (max-width: 768px) {
+        padding: 40px 15px;
+    }
+    
+    @media (max-width: 414px) {
+        padding: 30px 10px;
+    }
     
     .heart-icon-large {
         margin-bottom: 25px;
@@ -176,6 +242,14 @@ const removeFromFavorites = (item) => {
         font-size: 1.8rem;
         color: #333;
         font-weight: 500;
+
+        @media (max-width: 768px) {
+            font-size: 1.5rem;
+        }
+        
+        @media (max-width: 414px) {
+            font-size: 1.3rem;
+        }
     }
     
     p {

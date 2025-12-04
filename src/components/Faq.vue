@@ -105,6 +105,14 @@ const animateHeight = (id, isOpen) => {
     align-items: center;
     background: #e8e8e8;
     padding: 20px;
+
+    @media (max-width: 768px) {
+      padding: 15px;
+    }
+    
+    @media (max-width: 414px) {
+      padding: 10px;
+    }
   }
 
   &__details {
@@ -116,6 +124,16 @@ const animateHeight = (id, isOpen) => {
     overflow: hidden;
     cursor: pointer;
     transition: background 0.2s ease;
+
+    @media (max-width: 768px) {
+      margin-bottom: 8px;
+      border-radius: 6px;
+    }
+    
+    @media (max-width: 414px) {
+      margin-bottom: 6px;
+      border-radius: 4px;
+    }
   }
 
   &__title {
@@ -123,6 +141,14 @@ const animateHeight = (id, isOpen) => {
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
+
+    @media (max-width: 768px) {
+      padding: 12px 16px;
+    }
+    
+    @media (max-width: 414px) {
+      padding: 10px 12px;
+    }
   }
 
   &__icon {
@@ -132,6 +158,16 @@ const animateHeight = (id, isOpen) => {
     border-radius: 50%;
     font-size: 18px;
     font-weight: bold;
+
+    @media (max-width: 768px) {
+      padding: 0.6px 8px;
+      font-size: 16px;
+    }
+    
+    @media (max-width: 414px) {
+      padding: 0.6px 6px;
+      font-size: 14px;
+    }
   }
 
   &__content {
@@ -143,6 +179,14 @@ const animateHeight = (id, isOpen) => {
 
   &__inner {
     padding: 0 20px 15px;
+
+    @media (max-width: 768px) {
+      padding: 0 16px 12px;
+    }
+    
+    @media (max-width: 414px) {
+      padding: 0 12px 10px;
+    }
   }
 }
 
@@ -152,14 +196,36 @@ const animateHeight = (id, isOpen) => {
   flex-direction: column;
   align-items: center;
 
+  @media (max-width: 768px) {
+    margin-top: 40px;
+  }
+  
+  @media (max-width: 414px) {
+    margin-top: 30px;
+  }
+
   &__name {
     padding-top: 24px;
+
+    @media (max-width: 768px) {
+      padding-top: 20px;
+      font-size: 22px;
+    }
+    
+    @media (max-width: 414px) {
+      padding-top: 16px;
+      font-size: 20px;
+    }
   }
 
   &__line {
     width: 64px;
     height: 1px;
     background: black;
+
+    @media (max-width: 414px) {
+      width: 48px;
+    }
   }
 }
 </style>

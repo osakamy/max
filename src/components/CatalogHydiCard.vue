@@ -92,6 +92,28 @@ const handleCardClick = () => {
   position: relative;
   transition: all 0.3s ease;
 
+  @media (max-width: 1024px) {
+    flex: 1 1 280px;
+    max-width: 280px;
+    padding: 14px;
+    margin: 8px;
+  }
+  
+  @media (max-width: 768px) {
+    flex: 1 1 240px;
+    max-width: 240px;
+    padding: 12px;
+    margin: 6px;
+  }
+  
+  @media (max-width: 414px) {
+    flex: 1 1 100%;
+    max-width: 100%;
+    width: 100%;
+    margin: 5px 0;
+    padding: 10px;
+  }
+
   &:hover {
     transform: translateY(-8px);
     border-color: #999896;
@@ -108,6 +130,14 @@ const handleCardClick = () => {
   &__price {
     font-weight: bold;
     color: black;
+
+    @media (max-width: 768px) {
+      font-size: 14px;
+    }
+    
+    @media (max-width: 414px) {
+      font-size: 14px;
+    }
   }
 
   &__img {
@@ -116,6 +146,22 @@ const handleCardClick = () => {
     width: 288px;
     height: 384px;
     border-radius: 4px;
+
+    @media (max-width: 1024px) {
+      width: 250px;
+      height: 334px;
+    }
+    
+    @media (max-width: 768px) {
+      width: 216px;
+      height: 288px;
+    }
+    
+    @media (max-width: 414px) {
+      width: 100%;
+      height: auto;
+      max-height: 300px;
+    }
   }
 }
 

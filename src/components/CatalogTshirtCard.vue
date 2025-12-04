@@ -88,6 +88,29 @@ const handleCardClick = () => {
   position: relative;
   transition: all 0.3s ease;
 
+  &-content {
+    h3 {
+      font-size: 18px;
+      margin: 10px 0 5px;
+      
+      @media (max-width: 768px) {
+        font-size: 16px;
+      }
+      
+      @media (max-width: 414px) {
+        font-size: 16px;
+      }
+    }
+
+    p {
+      font-size: 14px;
+      
+      @media (max-width: 414px) {
+        font-size: 13px;
+      }
+    }
+  }
+
   &:hover {
     transform: translateY(-8px);
     border-color: #999896;
@@ -112,6 +135,10 @@ const handleCardClick = () => {
     width: 100%;
     height: auto;
     border-radius: 4px;
+
+    @media (max-width: 414px) {
+      max-height: 300px;
+    }
   }
 }
 
@@ -131,6 +158,20 @@ const handleCardClick = () => {
   opacity: 0;
   transition: all 0.3s ease;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+  @media (max-width: 768px) {
+    width: 32px;
+    height: 32px;
+    top: 8px;
+    right: 8px;
+  }
+  
+  @media (max-width: 414px) {
+    width: 30px;
+    height: 30px;
+    top: 6px;
+    right: 6px;
+  }
   
   &:hover {
     opacity: 1 !important;

@@ -53,33 +53,77 @@
         margin-top: 64px;
         justify-content: space-between;
 
+        @media (max-width: 1024px) {
+            margin-top: 50px;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        
+        @media (max-width: 768px) {
+            margin-top: 40px;
+            gap: 25px;
+            flex-direction: column;
+        }
+        
+        @media (max-width: 414px) {
+            margin-top: 30px;
+            gap: 20px;
+        }
+
         &--brand {
             max-width: 225px;
             gap: 12px;
+
+            @media (max-width: 768px) {
+                max-width: 100%;
+                text-align: center;
+            }
         }
 
         &--icons {
             display: flex;
             gap: 16px;
             margin-top: 24px;
+
+            @media (max-width: 768px) {
+                justify-content: center;
+                margin-top: 20px;
+            }
+            
+            @media (max-width: 414px) {
+                gap: 12px;
+                margin-top: 15px;
+            }
         }
 
         &--shop-items {
             display: flex;
             flex-direction: column;
             gap: 12px;
+
+            @media (max-width: 768px) {
+                gap: 10px;
+            }
         }
 
         &--info-items {
             display: flex;
             flex-direction: column;
             gap: 12px;
+
+            @media (max-width: 768px) {
+                gap: 10px;
+            }
         }
 
         &--contacts-items {
             display: flex;
             flex-direction: column;
             gap: 12px;
+
+            @media (max-width: 768px) {
+                gap: 10px;
+            }
         }
     }
 
@@ -88,12 +132,35 @@
         margin-top: 97px;
         margin-bottom: 64px;
         color: gray;
+
+        @media (max-width: 1024px) {
+            margin-top: 70px;
+            margin-bottom: 50px;
+        }
+        
+        @media (max-width: 768px) {
+            margin-top: 50px;
+            margin-bottom: 40px;
+            font-size: 13px;
+        }
+        
+        @media (max-width: 414px) {
+            margin-top: 40px;
+            margin-bottom: 30px;
+            font-size: 12px;
+        }
     }
 
     &__logo {
         border-left: black 1px solid;
         padding-left: 12px;
         margin-bottom: 15px;
+
+        @media (max-width: 768px) {
+            border-left: none;
+            padding-left: 0;
+            font-size: 18px;
+        }
     }
 }
 
@@ -102,30 +169,58 @@
     text-decoration: none;
     color: gray;
 
+    @media (max-width: 414px) {
+        font-size: 13px;
+    }
+
     &--hydi {
         margin-top: 15px;
+
+        @media (max-width: 768px) {
+            margin-top: 10px;
+        }
     }
 }
 
 .item__about {
     margin-top: 15px;
+
+    @media (max-width: 768px) {
+        margin-top: 10px;
+    }
 }
 
 .item__mail {
     margin-top: 15px;
+
+    @media (max-width: 768px) {
+        margin-top: 10px;
+    }
 }
 
 .shop {
     font-weight: 500;
     text-decoration: none;
     color: black;
+
+    @media (max-width: 414px) {
+        font-size: 15px;
+    }
 }
 p {
     color: gray;
+
+    @media (max-width: 414px) {
+        font-size: 13px;
+    }
 }
 
 h4 {
     color: black;
     font-weight: 500;
+
+    @media (max-width: 414px) {
+        font-size: 16px;
+    }
 }
 </style>

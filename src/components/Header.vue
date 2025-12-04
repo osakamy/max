@@ -170,6 +170,14 @@ watch(showResults, (newVal) => {
   width: 100%;
   margin-bottom: 24px;
   position: relative;
+
+  @media (max-width: 768px) {
+    margin-bottom: 20px;
+  }
+  
+  @media (max-width: 414px) {
+    margin-bottom: 16px;
+  }
 }
 
 .hero {
@@ -179,10 +187,38 @@ watch(showResults, (newVal) => {
   justify-content: space-between;
   margin-top: 24px;
 
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr 2fr 1fr;
+  }
+  
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 15px;
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  @media (max-width: 414px) {
+    gap: 12px;
+    margin-top: 16px;
+  }
+
   &__logo {
     font-weight: 500;
     border-left: black 1px solid;
     padding-left: 12px;
+
+    @media (max-width: 768px) {
+      border-left: none;
+      padding-left: 0;
+      order: 1;
+      font-size: 16px;
+    }
+    
+    @media (max-width: 414px) {
+      font-size: 14px;
+    }
   }
 }
 
@@ -191,12 +227,33 @@ watch(showResults, (newVal) => {
   gap: 48px;
   justify-content: center;
 
+  @media (max-width: 1024px) {
+    gap: 30px;
+  }
+  
+  @media (max-width: 768px) {
+    order: 2;
+    gap: 20px;
+  }
+  
+  @media (max-width: 414px) {
+    gap: 15px;
+  }
+
   &__main {
     font-weight: 500;
     cursor: pointer;
     color: black;
     text-decoration: none;
     position: relative;
+
+    @media (max-width: 768px) {
+      font-size: 13px;
+    }
+    
+    @media (max-width: 414px) {
+      font-size: 12px;
+    }
     
     &.router-link-active {
       font-weight: 600;
@@ -228,6 +285,16 @@ watch(showResults, (newVal) => {
   align-items: center;
   gap: 12px;
   justify-content: end;
+
+  @media (max-width: 768px) {
+    order: 3;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  @media (max-width: 414px) {
+    gap: 8px;
+  }
 }
 
 .favorites-wrapper {
@@ -265,6 +332,14 @@ watch(showResults, (newVal) => {
   border: 2px solid white;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   animation: pulse 2s infinite;
+
+  @media (max-width: 414px) {
+    min-width: 14px;
+    height: 14px;
+    font-size: 9px;
+    top: -4px;
+    right: -8px;
+  }
 }
 
 @keyframes pulse {
@@ -326,6 +401,23 @@ watch(showResults, (newVal) => {
     outline: none;
     transition: border-color 0.2s, box-shadow 0.2s;
 
+    @media (max-width: 1024px) {
+      width: 200px;
+    }
+    
+    @media (max-width: 768px) {
+      width: 180px;
+      height: 32px;
+      font-size: 13px;
+    }
+    
+    @media (max-width: 414px) {
+      width: 150px;
+      height: 30px;
+      font-size: 12px;
+      padding: 0 8px;
+    }
+
     &:focus {
       border-color: gray;
       box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.1);
@@ -351,6 +443,10 @@ watch(showResults, (newVal) => {
     overflow-y: auto;
     z-index: 1000;
     animation: slideDown 0.2s ease;
+
+    @media (max-width: 414px) {
+      max-height: 250px;
+    }
 
     &-header {
       padding: 10px 12px;
@@ -380,6 +476,11 @@ watch(showResults, (newVal) => {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     animation: slideDown 0.2s ease;
+
+    @media (max-width: 414px) {
+      padding: 12px;
+      font-size: 12px;
+    }
   }
 }
 
@@ -390,6 +491,10 @@ watch(showResults, (newVal) => {
   cursor: pointer;
   transition: background-color 0.2s;
   border-bottom: 1px solid #f0f0f0;
+
+  @media (max-width: 414px) {
+    padding: 6px 8px;
+  }
 
   &:last-child {
     border-bottom: none;
@@ -406,6 +511,12 @@ watch(showResults, (newVal) => {
       object-fit: cover;
       border-radius: 4px;
       margin-right: 12px;
+
+      @media (max-width: 414px) {
+        width: 32px;
+        height: 32px;
+        margin-right: 8px;
+      }
     }
 
     &__info {
@@ -421,12 +532,20 @@ watch(showResults, (newVal) => {
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+
+      @media (max-width: 414px) {
+        font-size: 12px;
+      }
     }
 
     &__price {
       font-size: 13px;
       color: #007bff;
       font-weight: 600;
+
+      @media (max-width: 414px) {
+        font-size: 11px;
+      }
     }
 
     &__category {

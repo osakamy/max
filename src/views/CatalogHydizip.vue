@@ -23,5 +23,23 @@ import CatalogHydizipCard from '../components/CatalogHydizipCard.vue'
     flex-wrap: wrap;
     gap: 20px;
     padding: 20px;
+    
+    @media (max-width: 1024px) {
+        gap: 15px;
+        padding: 15px;
+    }
+    
+    @media (max-width: 768px) {
+        gap: 12px;
+        padding: 12px;
+        justify-content: center;
+    }
+    
+    @media (max-width: 414px) {
+        gap: 10px;
+        padding: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 </style>
